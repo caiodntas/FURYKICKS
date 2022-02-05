@@ -1,0 +1,5 @@
+/*ESTILO QUE SERÁ APLICADO EM TODOS OS DISPOSITIVOS */
+* { 
+    width: 100%; height: 100%;
+    margin: 0; padding: 0; box-sizing: border-box;
+}
