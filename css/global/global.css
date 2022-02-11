@@ -13,8 +13,15 @@ body {
 li, a, button {
     text-decoration: none;
     list-style: none;
+    color: inherit;
 }
 
 input {
     border: none;
+    outline: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
 }
