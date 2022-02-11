@@ -14,3 +14,7 @@ li, a, button {
     text-decoration: none;
     list-style: none;
 }
+
+input {
+    border: none;
+}
