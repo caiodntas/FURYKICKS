@@ -1,0 +1,50 @@
+.filtersheader {
+    width: 200px; height: auto;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filtersheader .filterstext {
+    width: auto; height: auto;
+    font-weight: bold;
+}
+
+.filters .trashicon {
+    width: 20px; height: 20px;
+    margin-left: 100px;
+}
+
+.filters .trashicon:hover {
+    cursor: pointer;
+}
+
+.filters .filterscontainer {
+    background-color: white; border-radius: 10px;
+    padding: 25px;
+    width: 200px; height: 500px;
+}
+
+.filters .filterscontainer .price {
+    width: 100%; height: auto;
+}
+
+.filters .filterscontainer .price .priceheader {
+    width: 100%; height: auto;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.filters .filterscontainer .price .priceheader .pricetext {
+    font-weight: bold;
+}
+
+.filters .filterscontainer .price .priceinterval {}
+
+.filters .filterscontainer .price .priceinterval .intervaltext {
+    font-size: 12px;
+}
+
+
+.uparrow {
+    width: 25px; height: 25px;
+    cursor: pointer;
+}
