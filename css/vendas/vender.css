@@ -43,6 +43,19 @@
     font-size: 12px;
 }
 
+.filters .filterscontainer .price .priceinterval .rangebar {
+    margin-top: 5px;
+    height: 3px;
+    background-color: black;
+}
+
+.filters .filterscontainer .price .priceinterval .prices {
+    display: flex;
+}
+
+.pricetext {
+    width: min-content; height: auto;
+}
 
 .uparrow {
     width: 25px; height: 25px;
