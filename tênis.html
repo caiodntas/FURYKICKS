@@ -22,7 +22,9 @@
         <link rel="stylesheet" href="css/global/variaveis.css">
         <link rel="stylesheet" href="css/global/navbar.css">
         <!-- CSS DA PÁGINA -->
-        <link rel="stylesheet" href="css/vendas/vender.css">
+        <link rel="stylesheet" href="css/vendas/filtros.css">
+        <link rel="stylesheet" href="css/vendas/doublerangebar.css">
+
 </head>
 <body>
     <div class="navbar">
@@ -49,13 +51,20 @@
                 <div class="price">
                     <div class="priceheader">
                         <p class="pricetext">Preço</p>
-                        <ion-icon class="uparrow" name="chevron-up-outline"></ion-icon>
+                        <ion-icon class="priceuparrow" name="chevron-up-outline"></ion-icon>
                     </div>
                     <div class="priceinterval">
                         <p class="intervaltext">Intervalo de Preço</p>
-                        <input class="rangebar" type="range" min="0" max="biggestprice">
+                        <div class="doublerangebar">
+                            <div class="rangebarcontainer">
+                                <div class="slidertrack"></div>
+                                <div class="backgroundslidertrack"></div>
+                                <input class="rangebar" type="range" min="0" max="1000" value="30" id="slider1" oninput="SlideOne();">
+                                <input class="rangebar" type="range" min="0" max="1000" value="970" id="slider2" oninput="SlideTwo();">
+                            </div>
+                        </div>
                         <div class="prices">                            
-                            <p class="pricetext">R$0</p><p class="pricetext">R$10000</p>
+                            <p class="pricetext lowestprice" id="range1">R$0</p><p class="pricetext biggestprice" id="range2">R$10000</p>
                         </div>
                     </div>
                 </div>
@@ -64,4 +73,5 @@
     </div>
 </body>
     <!--- JAVASCRIPT -->
+    <script src="javascript/slider.js"></script>
 </html>

@@ -30,34 +30,37 @@
 
 .filters .filterscontainer .price .priceheader {
     width: 100%; height: auto;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: center;
 }
 
 .filters .filterscontainer .price .priceheader .pricetext {
     font-weight: bold;
+    width: min-content; height: auto;
 }
 
-.filters .filterscontainer .price .priceinterval {}
+.priceuparrow {
+    width: 25px; height: 25px;
+    margin-left: 82.5px;
+    cursor: pointer;
+}
 
 .filters .filterscontainer .price .priceinterval .intervaltext {
     font-size: 12px;
 }
 
-.filters .filterscontainer .price .priceinterval .rangebar {
-    margin-top: 5px;
-    height: 3px;
-    background-color: black;
-}
-
 .filters .filterscontainer .price .priceinterval .prices {
     display: flex;
+    margin-top: 10px;
+    width: 150px;
+    justify-content: space-between;
 }
 
-.pricetext {
-    width: min-content; height: auto;
+.filters .filterscontainer .price .priceinterval .prices .lowestprice {
+    width: min-content;
+    font-size: 14px;
 }
 
-.uparrow {
-    width: 25px; height: 25px;
-    cursor: pointer;
+.filters .filterscontainer .price .priceinterval .prices .biggestprice {
+    width: min-content;
+    font-size: 14px;
 }
