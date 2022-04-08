@@ -1,0 +1,87 @@
+.filters .filterscontainer .sizes {
+    width: 100%;
+    gap: 10px;
+    display: inline-block;
+}
+
+.filters .filterscontainer .sizes .sizeheader {
+    width: 100%; height: auto;
+    display: flex; align-items: center;
+    margin-bottom: 5px;
+}
+
+.filters .filterscontainer .sizes .sizeheader .sizetext {
+    font-weight: bold;
+    width: min-content; height: auto;
+}
+
+.filters .filterscontainer .sizes .sizeheader .sizeuparrow {
+    width: 25px; height: 25px;
+    margin-left: 50.23px;
+    cursor: pointer;
+}
+
+.filters .filterscontainer .sizes .sizesfilter {
+    width: 150px; height: auto;
+    display: inline-block;
+}
+
+.filters .filterscontainer .sizes .line {
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.filters .filterscontainer .sizes .sizesfilter input {
+    display: none;
+}
+
+.filters .filterscontainer .sizes .sizeoption {
+    width: 45px; height: 25px;
+    outline: 1px solid black;
+    color: black; font-size: 14px;
+    display: flex; cursor: pointer;
+    align-items: center; justify-content: space-around; text-align: center;
+}
+
+#size_33:checked ~ label[for="size_33"],
+#size_33-5:checked ~ label[for="size_33-5"],
+#size_34:checked ~ label[for="size_34"],
+#size_34-5:checked ~ label[for="size_34-5"],
+#size_35:checked ~ label[for="size_35"],
+#size_35-5:checked ~ label[for="size_35-5"],
+#size_36:checked ~ label[for="size_36"],
+#size_36-5:checked ~ label[for="size_36-5"],
+#size_37:checked ~ label[for="size_37"],
+#size_37-5:checked ~ label[for="size_37-5"],
+#size_38:checked ~ label[for="size_38"],
+#size_38-5:checked ~ label[for="size_38-5"],
+#size_39:checked ~ label[for="size_39"],
+#size_39-5:checked ~ label[for="size_39-5"],
+#size_40:checked ~ label[for="size_40"],
+#size_40-5:checked ~ label[for="size_40-5"],
+#size_41:checked ~ label[for="size_41"],
+#size_41-5:checked ~ label[for="size_41-5"],
+#size_42:checked ~ label[for="size_42"],
+#size_42-5:checked ~ label[for="size_42-5"],
+#size_43:checked ~ label[for="size_43"],
+#size_43-5:checked ~ label[for="size_43-5"],
+#size_44:checked ~ label[for="size_44"],
+#size_44-5:checked ~ label[for="size_44-5"],
+#size_45:checked ~ label[for="size_45"],
+#size_45-5:checked ~ label[for="size_45-5"],
+#size_46:checked ~ label[for="size_46"],
+#size_46-5:checked ~ label[for="size_46-5"],
+#size_47:checked ~ label[for="size_47"],
+#size_47-5:checked ~ label[for="size_47-5"],
+#size_48:checked ~ label[for="size_48"],
+#size_48-5:checked ~ label[for="size_48-5"],
+#size_49:checked ~ label[for="size_49"],
+#size_49-5:checked ~ label[for="size_49-5"],
+#size_50:checked ~ label[for="size_50"],
+#size_50-5:checked ~ label[for="size_50-5"]
+{
+  background: black;
+  color: #ffffff;
+}

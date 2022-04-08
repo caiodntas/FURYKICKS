@@ -9,7 +9,7 @@
     <!-- FAMÍLIA ROBOTO -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- ÍCONE DO SITE -->
-    <link rel="shortcut icon" href="data/logoicone.ico">
+    <link rel="shortcut icon" href="data/furykicks/logoicone.ico">
     <!-- IO-ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -24,6 +24,9 @@
         <!-- CSS DA PÁGINA -->
         <link rel="stylesheet" href="css/vendas/filtros.css">
         <link rel="stylesheet" href="css/vendas/doublerangebar.css">
+        <link rel="stylesheet" href="css/vendas/rightside.css">
+        <link rel="stylesheet" href="css/vendas/sortby.css">
+        <link rel="stylesheet" href="css/vendas/catalogo.css">
 
 </head>
 <body>
@@ -51,16 +54,16 @@
                 <div class="price">
                     <div class="priceheader">
                         <p class="pricetext">Preço</p>
-                        <ion-icon class="priceuparrow" name="chevron-up-outline"></ion-icon>
+                        <ion-icon id="pricearrow" class="priceuparrow" name="chevron-up-outline"></ion-icon>
                     </div>
-                    <div class="priceinterval">
+                    <div id="pricefilter" class="priceinterval">
                         <p class="intervaltext">Intervalo de Preço</p>
                         <div class="doublerangebar">
                             <div class="rangebarcontainer">
                                 <div class="slidertrack"></div>
                                 <div class="backgroundslidertrack"></div>
-                                <input class="rangebar" type="range" min="0" max="1000" value="30" id="slider1" oninput="SlideOne();">
-                                <input class="rangebar" type="range" min="0" max="1000" value="970" id="slider2" oninput="SlideTwo();">
+                                <input class="rangebar" type="range" min="0" max="1000" value="50" id="slider1" oninput="SlideOne();">
+                                <input class="rangebar" type="range" min="0" max="1000" value="950" id="slider2" oninput="SlideTwo();">
                             </div>
                         </div>
                         <div class="prices">                            
@@ -68,10 +71,204 @@
                         </div>
                     </div>
                 </div>
+                <hr>
+                <div class="brands">
+                    <div class="brandheader">
+                        <p class="brandtext">Marcas</p>
+                        <ion-icon id="brandarrow" class="branduparrow" name="chevron-up-outline"></ion-icon>
+                    </div>
+                    <div id="brandfilter" class="brandfilter">
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Adidas</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Air Jordan</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Asics</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Converse</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">New Balance</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Nike</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Öus</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Puma</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Reebok</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Under Armor</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Vans</span>
+                        </a>
+                        <a class="brandoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Yeezy</span>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="sizes">
+                    <div class="sizeheader">
+                        <p class="sizetext">Tamanhos</p>
+                        <ion-icon id="sizearrow" class="sizeuparrow" name="chevron-up-outline"></ion-icon>
+                    </div>
+                    <div id="sizesfilter" class="sizesfilter">
+                        <div class="line">
+                            <input id="size_33" type="checkbox">
+                            <label for="size_33" class="sizeoption">33</label>
+                            <input id="size_33-5" type="checkbox">
+                            <label for="size_33-5" class="sizeoption">33,5</label>
+                            <input id="size_34" type="checkbox">
+                            <label for="size_34" class="sizeoption">34</label>
+                            <input id="size_34-5" type="checkbox">
+                            <label for="size_34-5" class="sizeoption">34,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_35" type="checkbox">
+                            <label for="size_35" class="sizeoption">35</label>
+                            <input id="size_35-5" type="checkbox">
+                            <label for="size_35-5" class="sizeoption">35,5</label>
+                            <input id="size_36" type="checkbox">
+                            <label for="size_36" class="sizeoption">36</label>
+                            <input id="size_36-5" type="checkbox">
+                            <label for="size_36-5" class="sizeoption">36,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_37" type="checkbox">
+                            <label for="size_37" class="sizeoption">37</label>
+                            <input id="size_37-5" type="checkbox">
+                            <label for="size_37-5" class="sizeoption">37,5</label>
+                            <input id="size_38" type="checkbox">
+                            <label for="size_38" class="sizeoption">38</label>
+                            <input id="size_38-5" type="checkbox">
+                            <label for="size_38-5" class="sizeoption">38,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_39" type="checkbox">
+                            <label for="size_39" class="sizeoption">39</label>
+                            <input id="size_39-5" type="checkbox">
+                            <label for="size_39-5" class="sizeoption">39,5</label>
+                            <input id="size_40" type="checkbox">
+                            <label for="size_40" class="sizeoption">40</label>
+                            <input id="size_40-5" type="checkbox">
+                            <label for="size_40-5" class="sizeoption">40,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_41" type="checkbox">
+                            <label for="size_41" class="sizeoption">41</label>
+                            <input id="size_41-5" type="checkbox">
+                            <label for="size_41-5" class="sizeoption">41,5</label>
+                            <input id="size_42" type="checkbox">
+                            <label for="size_42" class="sizeoption">42</label>
+                            <input id="size_42-5" type="checkbox">
+                            <label for="size_42-5" class="sizeoption">42,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_43" type="checkbox">
+                            <label for="size_43" class="sizeoption">43</label>
+                            <input id="size_43-5" type="checkbox">
+                            <label for="size_43-5" class="sizeoption">43,5</label>
+                            <input id="size_44" type="checkbox">
+                            <label for="size_44" class="sizeoption">44</label>
+                            <input id="size_44-5" type="checkbox">
+                            <label for="size_44-5" class="sizeoption">44,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_45" type="checkbox">
+                            <label for="size_45" class="sizeoption">45</label>
+                            <input id="size_45-5" type="checkbox">
+                            <label for="size_45-5" class="sizeoption">45,5</label>
+                            <input id="size_46" type="checkbox">
+                            <label for="size_46" class="sizeoption">46</label>
+                            <input id="size_46-5" type="checkbox">
+                            <label for="size_46-5" class="sizeoption">46,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_47" type="checkbox">
+                            <label for="size_47" class="sizeoption">47</label>
+                            <input id="size_47-5" type="checkbox">
+                            <label for="size_47-5" class="sizeoption">47,5</label>
+                            <input id="size_48" type="checkbox">
+                            <label for="size_48" class="sizeoption">48</label>
+                            <input id="size_48-5" type="checkbox">
+                            <label for="size_48-5" class="sizeoption">48,5</label>
+                        </div>
+                        <div class="line">
+                            <input id="size_49" type="checkbox">
+                            <label for="size_49" class="sizeoption">49</label>
+                            <input id="size_49-5" type="checkbox">
+                            <label for="size_49-5" class="sizeoption">49,5</label>
+                            <input id="size_50" type="checkbox">
+                            <label for="size_50" class="sizeoption">50</label>
+                            <input id="size_50-5" type="checkbox">
+                            <label for="size_50-5" class="sizeoption">50,5</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="condition">
+                    <div class="conditionheader">
+                        <p class="conditiontext">Condição</p>
+                        <ion-icon id="conditionarrow" class="conditionuparrow" name="chevron-up-outline"></ion-icon>
+                    </div>
+                    <div id="conditionfilter" class="conditionfilter">
+                        <a class="conditionoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Novo</span>
+                        </a>
+                        <a class="conditionoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Novo com Defeitos</span>
+                        </a>
+                        <a class="conditionoption">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkboxtext">Usado</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="applyfiltersbutton">
+                <p class="applyfilterstext">APLICAR FILTROS</p>
+            </div>
+        </div>
+        <div class="rightside">
+            <div class="sortby">
+                <p class="sortbytext">Ordenar</p>
+                <select class="sortbyoptions">
+                    <option value="RisingPrice" class="RisingPrice">Preço Crescente</option>
+                    <option value="UnrisingPrice" class="UnrisingPrice">Preço Decrescente</option>
+                    <option value="MostRelevant" class="MostRelevant">Mais Relevantes</option>
+                </select>
+                <ion-icon class="sortbyarrow" name="chevron-up-outline"></ion-icon>
+                <ion-icon class="sortbylist" name="list-outline"></ion-icon>
+                <ion-icon class="sortbymenu" name="grid-outline"></ion-icon>
             </div>
         </div>
     </div>
 </body>
     <!--- JAVASCRIPT -->
     <script src="javascript/slider.js"></script>
+    <script src="javascript/showandhidefilters.js"></script>
 </html>

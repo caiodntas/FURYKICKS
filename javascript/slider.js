@@ -15,7 +15,7 @@ function SlideOne() {
     if (parseInt(SliderTwo.value) - parseInt(SliderOne.value) <= MinGap) {
         SliderOne.value = parseInt(SliderTwo.value) - MinGap;
     }
-    DisplayValOne.textContent = SliderOne.value;
+    DisplayValOne.textContent = "R$" + SliderOne.value;
     fillColor();
 }
 
@@ -23,7 +23,7 @@ function SlideTwo() {
     if (parseInt(SliderTwo.value) - parseInt(SliderOne.value) <= MinGap) {
         SliderTwo.value = parseInt(SliderOne.value) + MinGap;
     }
-    DisplayValTwo.textContent = SliderTwo.value;
+    DisplayValTwo.textContent = "R$" + SliderTwo.value;
     fillColor();
 }
 
@@ -32,6 +32,4 @@ function fillColor() {
     percent2 = (SliderTwo.value / SliderMaxValue) * 100;
 
     SliderTrack.style.background = `linear-gradient(to right, #00000000 ${percent1}% , black ${percent1}% , black ${percent2}%, #00000000 ${percent2}%)`;
-
-    console.log(SliderTrack.style);
 }
